@@ -67,10 +67,10 @@ endif (NOT DEFINED CMAKE_INSTALL_NAME_TOOL)
 
 # Setup iOS developer location
 if (IPHONEOS)
-    set (_CMAKE_IOS_DEVELOPER_ROOT "/Developer/Platforms/iPhoneOS.platform/Developer")
+    set (_CMAKE_IOS_DEVELOPER_ROOT "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer")
 else ()
     if (IPHONESIMULATOR)
-        set (_CMAKE_IOS_DEVELOPER_ROOT "/Developer/Platforms/iPhoneSimulator.platform/Developer")
+        set (_CMAKE_IOS_DEVELOPER_ROOT "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer")
     endif ()
 endif ()
 # Find installed iOS SDKs
