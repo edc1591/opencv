@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-    s.name             = 'OpenCV'
+    s.name             = 'OpenCV-iOS'
     s.version          = '3.1.1'
-    s.summary          = 'OpenCV (Computer Vision) for iOS.'
+    s.summary          = 'OpenCV (Computer Vision) for iOS as a dynamic library.'
 
     s.description      = <<-DESC
 OpenCV: open source computer vision library
@@ -12,10 +12,10 @@ OpenCV: open source computer vision library
     Dev zone: http://code.opencv.org
     DESC
 
-    s.homepage         = 'https://github.com/opencv/opencv'
+    s.homepage         = 'https://github.com/edc1591/opencv-ios'
     s.license          = { :type => '3-clause BSD', :file => 'LICENSE' }
     s.authors          = 'opencv.org'
-    s.source           = { :git => 'https://github.com/edc1591/opencv.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/edc1591/opencv-ios.git', :tag => s.version.to_s }
 
     s.ios.deployment_target = "8.0"
     s.source_files = "install/include/**/*{.h,.hpp}"
@@ -24,19 +24,19 @@ OpenCV: open source computer vision library
     s.header_mappings_dir = "install/include"
     s.vendored_libraries = "install/lib/libopencv2.dylib"
     s.requires_arc = false
-    # s.libraries = [ 'z', 'stdc++' ]
-    # s.frameworks = [
-    #     "Accelerate",
-    #     "AssetsLibrary",
-    #     "AVFoundation",
-    #     "CoreGraphics",
-    #     "CoreImage",
-    #     "CoreMedia",
-    #     "CoreVideo",
-    #     "Foundation",
-    #     "QuartzCore",
-    #     "UIKit"
-    # ]
+    s.libraries = [ 'stdc++' ]
+    s.frameworks = [
+        "Accelerate",
+        "AssetsLibrary",
+        "AVFoundation",
+        "CoreGraphics",
+        "CoreImage",
+        "CoreMedia",
+        "CoreVideo",
+        "Foundation",
+        "QuartzCore",
+        "UIKit"
+    ]
 
     s.prepare_command = <<-CMD
         mkdir build-iphoneos
