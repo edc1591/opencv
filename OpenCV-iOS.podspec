@@ -51,5 +51,6 @@ OpenCV: open source computer vision library
         mv ../build-iphoneos/install/ ../
         cd ../install
         lipo -create lib/libopencv_world.dylib ../build-iphonesimulator/lib/Release/libopencv_world.dylib -output lib/libopencv2.dylib
+        install_name_tool -id @rpath/libopencv2.dylib lib/libopencv2.dylib
     CMD
 end
