@@ -1,3 +1,5 @@
+**This repository is considered deprecated as building OpenCV as a dynamic framework is [now supported](https://github.com/opencv/opencv/pull/8009).**
+
 ### OpenCV: Open Source Computer Vision Library
 
 #### Resources
